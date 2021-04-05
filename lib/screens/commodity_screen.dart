@@ -10,12 +10,15 @@ class CommodityScreen extends StatelessWidget {
 
   // ignore: missing_return
   Color raitingColor() {
-    if (product.raiting <= 5 && product.raiting >= 4)
+    if (product.raiting <= 5 && product.raiting >= 4) {
       return ProjectColor.goodRating;
-    if (product.raiting < 4 && product.raiting >= 3)
+    }
+    if (product.raiting < 4 && product.raiting >= 3) {
       return ProjectColor.averageRating;
-    if (product.raiting <= 3 && product.raiting >= 0)
+    }
+    if (product.raiting <= 3 && product.raiting >= 0) {
       return ProjectColor.lowRating;
+    }
   }
 
   @override
@@ -189,8 +192,8 @@ class CommodityScreen extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(top: 16, left: 16),
                       child: InkWell(
-                        child: IconContainer(iconPath: ProjectIcons.arrLeft),
                         onTap: () => Navigator.pop(context),
+                        child: IconContainer(iconPath: ProjectIcons.arrLeft),
                       ),
                     ),
                   ),
@@ -199,11 +202,11 @@ class CommodityScreen extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(top: 16, right: 16),
                       child: InkWell(
+                        onTap: () {},
                         child: IconContainer(
                             iconPath: product.favorite
                                 ? ProjectIcons.favoritEnabled
                                 : ProjectIcons.favoritDisabled),
-                        onTap: () {},
                       ),
                     ),
                   ),

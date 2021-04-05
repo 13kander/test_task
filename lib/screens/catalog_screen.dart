@@ -26,7 +26,7 @@ class _CatalogScreenState extends State<CatalogScreen>
   void initState() {
     _tabController = TabController(length: 3, vsync: this);
     super.initState();
-    _scrollViewController = new ScrollController();
+    _scrollViewController = ScrollController();
     _scrollViewController.addListener(() {
       if (_scrollViewController.position.userScrollDirection ==
           ScrollDirection.reverse) {
@@ -47,6 +47,13 @@ class _CatalogScreenState extends State<CatalogScreen>
       }
     });
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _scrollViewController.dispose();
+    _tabController.dispose();
   }
 
   @override

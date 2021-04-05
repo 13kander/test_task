@@ -10,12 +10,15 @@ class CommodityContainer extends StatelessWidget {
 
   // ignore: missing_return
   Color raitingColor() {
-    if (product.raiting <= 5 && product.raiting >= 4)
+    if (product.raiting <= 5 && product.raiting >= 4) {
       return ProjectColor.goodRating;
-    if (product.raiting < 4 && product.raiting >= 3)
+    }
+    if (product.raiting < 4 && product.raiting >= 3) {
       return ProjectColor.averageRating;
-    if (product.raiting <= 3 && product.raiting >= 0)
+    }
+    if (product.raiting <= 3 && product.raiting >= 0) {
       return ProjectColor.lowRating;
+    }
   }
 
   @override

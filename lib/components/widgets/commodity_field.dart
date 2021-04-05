@@ -46,6 +46,7 @@ class DashedLinePainter extends CustomPainter {
       {this.dashWidth = 2, this.dashSpace = 2, this.strokeWidth = 2});
   @override
   void paint(Canvas canvas, Size size) {
+    // ignore: omit_local_variable_types
     double startX = 0;
     final paint = Paint()
       ..color = ProjectColor.textDivider
